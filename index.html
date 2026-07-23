@@ -7,7 +7,14 @@
 <meta name="description" content="Coaching sportif privé à Cannes dans un studio fermé au cœur de la ville. Expertise biomécanique, suivi sur mesure, analyse corporelle de précision. Sur rendez-vous.">
   <meta name="google-site-verification" content="OFNlJsLie36IwIcbnbdloGAf82VRU2mbPsJXbdpOmNo" />
   <link rel="canonical" href="https://leclos-cannes.fr/" />
-
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18166505622"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18166505622');
+</script>
 <!-- Open Graph / partage social -->
 <meta property="og:title" content="Le Clos · Cannes">
 <meta property="og:description" content="Coaching privé sur mesure & analyse corporelle de précision. Cannes, sur rendez-vous.">
@@ -466,7 +473,12 @@ form.addEventListener('submit',async(ev)=>{
   const data=new FormData(form);
   try{
     const r=await fetch(form.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});
-    if(r.ok){form.style.display='none';ok.style.display='block';ok.scrollIntoView({behavior:'smooth',block:'center'});}
+    if(r.ok){
+  form.style.display='none';
+  ok.style.display='block';
+  ok.scrollIntoView({behavior:'smooth',block:'center'});
+  gtag('event', 'conversion', {'send_to': 'AW-18166505622/7JSVCN2ctdUcEJbBu9ZD'});
+}
     else{alert("Une erreur est survenue. Vous pouvez nous écrire directement sur Instagram @leclos.cannes.");}
   }catch(e){alert("Connexion impossible. Réessayez ou contactez-nous sur Instagram @leclos.cannes.");}
 });
