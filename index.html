@@ -477,7 +477,11 @@ form.addEventListener('submit',async(ev)=>{
   form.style.display='none';
   ok.style.display='block';
   ok.scrollIntoView({behavior:'smooth',block:'center'});
-  gtag('event', 'conversion', {'send_to': 'AW-18166505622/7JSVCN2ctdUcEJbBu9ZD'});
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18166505622/7JSVCN2ctdUcEJbBu9ZD',
+    'value': 60,
+    'currency': 'EUR'
+  });
 }
     else{alert("Une erreur est survenue. Vous pouvez nous écrire directement sur Instagram @leclos.cannes.");}
   }catch(e){alert("Connexion impossible. Réessayez ou contactez-nous sur Instagram @leclos.cannes.");}
