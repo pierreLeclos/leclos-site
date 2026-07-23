@@ -433,6 +433,9 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
         </select>
       </div>
       <div class="field"><label for="dispo">Vos disponibilités souhaitées</label><textarea id="dispo" name="disponibilites" placeholder="Ex. en semaine après 18h, ou samedi matin…" required></textarea></div>
+      <input type="hidden" id="utm_source" name="utm_source" value="">
+<input type="hidden" id="utm_medium" name="utm_medium" value="">
+<input type="hidden" id="utm_campaign" name="utm_campaign" value="">
       <div class="form-submit"><button type="submit" class="btn-or">Envoyer ma demande</button></div>
       <p class="form-note">Réponse personnelle sous 24 h. Aucune donnée n'est partagée à des tiers.</p>
     </form>
@@ -466,6 +469,11 @@ const io=new IntersectionObserver((entries)=>{
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
 // Soumission du formulaire (Formspree AJAX) — affiche la confirmation sans quitter la page
+  // Capture UTM params
+const urlParams = new URLSearchParams(window.location.search);
+document.getElementById('utm_source').value = urlParams.get('utm_source') || 'direct';
+document.getElementById('utm_medium').value = urlParams.get('utm_medium') || 'none';
+document.getElementById('utm_campaign').value = urlParams.get('utm_campaign') || 'none';
 const form=document.getElementById('rdvForm');
 const ok=document.getElementById('formOk');
 form.addEventListener('submit',async(ev)=>{
