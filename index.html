@@ -421,20 +421,20 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
         <div class="field"><label for="nom">Nom</label><input type="text" id="nom" name="nom" placeholder="Votre nom" required></div>
       <div class="field"><label for="tel">Téléphone</label>
   <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;">
-    <select id="indicatif" name="indicatif" required onchange="document.getElementById('indicatif-autre').style.display = this.value === '+other' ? 'inline-block' : 'none';" style="flex:0 0 170px;background:transparent;border:none;border-bottom:1px solid currentColor;color:inherit;font:inherit;padding:0 18px 4px 0;appearance:none;-webkit-appearance:none;-moz-appearance:none;cursor:pointer;background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 10 6%22><path d=%22M0 0l5 6 5-6z%22 fill=%22%23c9a96e%22/></svg>');background-repeat:no-repeat;background-position:right center;background-size:10px 6px;">
+    <select id="indicatif" name="indicatif" required onchange="document.getElementById('indicatif-autre').style.display = this.value === '+other' ? 'block' : 'none';" style="flex:0 0 170px;background:transparent;border:none;border-bottom:1px solid currentColor;color:inherit;font:inherit;padding:0 18px 4px 0;appearance:none;-webkit-appearance:none;-moz-appearance:none;cursor:pointer;background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 10 6%22><path d=%22M0 0l5 6 5-6z%22 fill=%22%23c9a96e%22/></svg>');background-repeat:no-repeat;background-position:right center;background-size:10px 6px;">
       <option value="+49">Allemagne +49</option>
       <option value="+966">Arabie Saoudite +966</option>
-      <option value="+32">Belgique +32</option>
       <option value="+971">Émirats arabes unis +971</option>
       <option value="+1">États-Unis +1</option>
       <option value="+33" selected>France +33</option>
+      <option value="+961">Liban +961</option>
       <option value="+44">Royaume-Uni +44</option>
       <option value="+7">Russie +7</option>
       <option value="+41">Suisse +41</option>
       <option value="+other">Autre</option>
     </select>
-    <input type="text" id="indicatif-autre" name="indicatif_autre" placeholder="ex: +212" style="display:none;flex:0 0 100px;background:transparent;border:none;border-bottom:1px solid currentColor;color:inherit;font:inherit;padding:0 0 4px 0;">
-    <input type="tel" id="tel" name="telephone" placeholder="6 12 34 56 78" required style="flex:1 1 200px;min-width:150px;background:transparent;border:none;border-bottom:1px solid currentColor;color:inherit;font:inherit;padding:0 0 4px 0;">
+    <input type="tel" id="tel" name="telephone" placeholder="6 12 34 56 78" required style="flex:1 1 150px;min-width:150px;background:transparent;border:none;border-bottom:1px solid currentColor;color:inherit;font:inherit;padding:0 0 4px 0;">
+    <input type="text" id="indicatif-autre" name="indicatif_autre" placeholder="Précisez l'indicatif, ex: +212" style="display:none;flex-basis:100%;background:transparent;border:none;border-bottom:1px solid currentColor;color:inherit;font:inherit;padding:0 0 4px 0;">
   </div>
 </div>
             
