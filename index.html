@@ -115,7 +115,7 @@ nav.scrolled{
 .nav-right{display:flex;align-items:center;gap:20px}
 .nav-lang{display:flex;align-items:center;gap:7px;font-family:var(--serif-titre);font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--creme-doux);text-decoration:none;transition:color .3s ease}
 .nav-lang:hover{color:var(--or)}
-.nav-lang .flag{font-size:15px;line-height:1}
+.nav-lang .flag{width:17px;height:12px;border-radius:1px;flex-shrink:0}
 .nav-cta{font-family:var(--serif-titre);font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--or);text-decoration:none;border:1px solid var(--trait);padding:11px 22px;border-radius:2px;transition:background .4s,color .4s}
 .nav-cta:hover{background:var(--or);color:var(--noir)}
 
@@ -294,7 +294,7 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
 <nav id="nav">
   <a href="#top" class="nav-logo">LE <span>CLOS</span></a>
   <div class="nav-right">
-    <a href="/personal-trainer-cannes" class="nav-lang"><span class="flag">🇬🇧</span> English</a>
+    <a href="/personal-trainer-cannes" class="nav-lang"><svg class="flag" viewBox="0 0 60 36" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="36" fill="#00247d"/><path d="M0,0 60,36 M60,0 0,36" stroke="#fff" stroke-width="6"/><path d="M0,0 60,36 M60,0 0,36" stroke="#cf142b" stroke-width="2"/><path d="M30,0 30,36 M0,18 60,18" stroke="#fff" stroke-width="10"/><path d="M30,0 30,36 M0,18 60,18" stroke="#cf142b" stroke-width="6"/></svg> English</a>
     <a href="#reserver" class="nav-cta">Réserver</a>
   </div>
 </nav>
