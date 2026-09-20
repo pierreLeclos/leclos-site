@@ -1,43 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://leclos-cannes.fr/</loc>
+    <loc>https://www.leclos-cannes.fr/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://leclos-cannes.fr/coaching-prive-cannes</loc>
+    <loc>https://www.leclos-cannes.fr/coaching-prive-cannes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://leclos-cannes.fr/coach-personnel-cannes</loc>
+    <loc>https://www.leclos-cannes.fr/coach-personnel-cannes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://leclos-cannes.fr/coaching-yacht-villa-cannes</loc>
+    <loc>https://www.leclos-cannes.fr/coaching-yacht-villa-cannes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://leclos-cannes.fr/personal-trainer-cannes</loc>
+    <loc>https://www.leclos-cannes.fr/personal-trainer-cannes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://leclos-cannes.fr/analyse-corporelle-cannes</loc>
+    <loc>https://www.leclos-cannes.fr/analyse-corporelle-cannes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://leclos-cannes.fr/yacht-villa-personal-trainer-cannes</loc>
+    <loc>https://www.leclos-cannes.fr/yacht-villa-personal-trainer-cannes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://leclos-cannes.fr/body-composition-analysis-cannes</loc>
+    <loc>https://www.leclos-cannes.fr/body-composition-analysis-cannes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.leclos-cannes.fr/blog</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.leclos-cannes.fr/comment-choisir-coach-sportif-cannes</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.leclos-cannes.fr/guide-coaching-yacht-villa-cannes</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
