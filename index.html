@@ -296,7 +296,7 @@ nav.scrolled{
 .coachs-titre{text-align:center;margin-bottom:60px}
 .coachs-titre h2{font-family:var(--serif-corps);font-weight:400;font-size:clamp(32px,4.5vw,52px);line-height:1.1;margin-top:16px}
 .fondateur{text-align:center}
-.fondateur-photo{display:none;width:220px;aspect-ratio:4/5;object-fit:cover;margin:0 auto 34px;border:1px solid var(--trait);border-radius:3px}
+.fondateur-photo{display:block;width:220px;aspect-ratio:4/5;object-fit:cover;margin:0 auto 34px;border:1px solid var(--trait);border-radius:3px}
 .fondateur-nom{font-family:var(--serif-corps);font-weight:400;font-size:clamp(38px,5.5vw,64px);line-height:1;color:var(--creme)}
 .fondateur-role{font-family:var(--serif-titre);font-size:13px;letter-spacing:0.28em;text-transform:uppercase;color:var(--or);margin-top:16px}
 .chiffres{display:grid;grid-template-columns:repeat(3,1fr);margin:54px 0;border-top:1px solid var(--trait);border-bottom:1px solid var(--trait)}
@@ -307,11 +307,12 @@ nav.scrolled{
 .fondateur-texte{max-width:680px;margin:0 auto;text-align:left}
 .fondateur-texte p{color:var(--creme-doux);margin-bottom:22px}
 .fondateur-citation{font-style:italic;font-size:clamp(22px,2.6vw,28px);color:var(--creme);text-align:center;margin-top:40px}
-.equipe{display:none;grid-template-columns:1fr 1fr;gap:40px;margin-top:80px;padding-top:60px;border-top:1px solid var(--trait)}
+.equipe{display:none;grid-template-columns:repeat(auto-fit,minmax(260px,380px));justify-content:center;gap:40px;margin-top:80px;padding-top:60px;border-top:1px solid var(--trait)}
 .equipe.active{display:grid}
 .coach-fiche img{width:100%;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--trait);border-radius:3px;margin-bottom:22px}
 .coach-fiche h3{font-family:var(--serif-corps);font-weight:400;font-size:30px;color:var(--creme)}
 .coach-fiche .role{font-family:var(--serif-titre);font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:var(--or);margin:8px 0 14px}
+.coach-fiche{text-align:center}
 .coach-fiche p{color:var(--creme-doux);font-size:18px}
 
 /* ============ PARCOURS ============ */
@@ -324,6 +325,8 @@ nav.scrolled{
 .seance{padding-top:90px}
 .seance h3{font-family:var(--serif-corps);font-weight:400;font-size:clamp(28px,3.6vw,42px);text-align:center}
 .seance-intro{color:var(--creme-doux);text-align:center;margin:14px auto 50px;max-width:600px}
+.seance-photo{max-width:520px;margin:0 auto 50px}
+.seance-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--trait);border-radius:3px}
 .etapes{list-style:none;counter-reset:etape}
 .etape{display:grid;grid-template-columns:70px 1fr;gap:20px;padding:28px 0;border-top:1px solid var(--trait)}
 .etape:last-child{border-bottom:1px solid var(--trait)}
@@ -357,7 +360,7 @@ nav.scrolled{
 /* ============ TARIFS ============ */
 .coaching{padding:130px 0}
 .coaching .grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:80px;align-items:start}
-.coaching-img{position:sticky;top:120px;aspect-ratio:3/4;border-radius:3px;overflow:hidden;border:1px solid var(--trait);background:#000 center/cover no-repeat;background-image:url("assets/coaching.jpg")}
+.coaching-img{position:sticky;top:120px;aspect-ratio:3/4;border-radius:3px;overflow:hidden;border:1px solid var(--trait);background:#000 center/cover no-repeat;background-image:url("assets/coaching-pierre.jpg")}
 .coaching h2{font-family:var(--serif-corps);font-weight:400;font-size:clamp(32px,4.5vw,52px);line-height:1.1;margin:18px 0 20px}
 .coaching p{color:var(--creme-doux);margin-bottom:18px}
 .tarif-bloc{margin-top:40px}
@@ -379,7 +382,7 @@ nav.scrolled{
 .club-gallery{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:repeat(2,1fr);gap:18px;height:620px}
 .club-gallery figure{position:relative;overflow:hidden;border-radius:3px;border:1px solid var(--trait);background:#0c0c0c center/cover no-repeat}
 .club-gallery figure::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(10,10,10,0.6))}
-.club-gallery .g1{grid-row:span 2;background-image:url("assets/club-1.jpg")}
+.club-gallery .g1{grid-row:span 2;background-image:url("assets/coaching-mathieu.jpg")}
 .club-gallery .g2{background-image:url("assets/club-2.jpg")}
 .club-gallery .g3{background-image:url("assets/club-3.jpg")}
 .valeurs{display:flex;justify-content:center;gap:60px;margin-top:80px;flex-wrap:wrap}
@@ -392,8 +395,8 @@ nav.scrolled{
 .bilan .grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .bilan-img{
   position:relative;aspect-ratio:4/5;border-radius:3px;overflow:hidden;
-  background:#000 center/contain no-repeat;
-  background-image:url("assets/leclos-anovator-v2.jpg");
+  background:#000 center/cover no-repeat;
+  background-image:url("assets/analyse-anovator.jpg");
   border:1px solid var(--trait);
 }
 @media (max-width:768px){.bilan-img{aspect-ratio:3/5;}}
@@ -545,11 +548,10 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
   <div class="wrap">
     <div class="coachs-titre reveal">
       <span class="eyebrow">Vos coachs</span>
-      <h2>Le fondateur</h2>
+      <h2>Le fondateur et son équipe</h2>
     </div>
 
     <div class="fondateur reveal">
-      <!-- PORTRAIT : déposer assets/pierre.jpg puis passer style="display:block" -->
       <img src="assets/pierre.jpg" alt="Pierre Leblond, fondateur du Clos et préparateur physique à Cannes" class="fondateur-photo" loading="lazy">
       <p class="fondateur-nom">Pierre Leblond</p>
       <p class="fondateur-role">Fondateur du Clos · Préparateur physique</p>
@@ -567,20 +569,22 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
       <p class="fondateur-citation">« La perfection n'est accessible que par la répétition. »</p>
     </div>
 
-    <!-- ÉQUIPE : masquée jusqu'aux photos. Pour l'activer : ajouter la classe "active" (class="equipe active"). -->
-    <div class="equipe" id="equipe">
+    <!-- ÉQUIPE -->
+    <div class="equipe active" id="equipe">
       <div class="coach-fiche">
         <img src="assets/mathieu.jpg" alt="Mathieu, coach au Clos à Cannes" loading="lazy">
         <h3>Mathieu</h3>
-        <p class="role">Coach</p>
-        <p>Diplômé d'État et certifié Le Clos. [Deux phrases sur sa façon de coacher, à compléter après la séance photo.]</p>
+        <p class="role">Coach · Diplômé d'État, certifié Le Clos</p>
+        <p>Ancien handballeur professionnel, formé en centre de formation puis trois saisons chez les pros, Mathieu a ensuite été coach de CrossFit pendant un an et demi à Montréal. Il connaît l'exigence de l'entraînement de l'intérieur. Au Clos depuis l'ouverture, il accompagne aussi bien la performance que la santé, le bien-être et la longévité.</p>
       </div>
+      <!-- KARINA : décommenter dès que assets/karina.jpg est en ligne
       <div class="coach-fiche">
         <img src="assets/karina.jpg" alt="Karina, coach au Clos à Cannes" loading="lazy">
         <h3>Karina</h3>
         <p class="role">Coach · Accompagnement féminin, au studio et à domicile</p>
         <p>Formée par Pierre et certifiée Le Clos, Karina accompagne, au studio comme à domicile, les clientes qui souhaitent être coachées par une femme. [À compléter après la séance photo.]</p>
       </div>
+      -->
     </div>
   </div>
 </section>
@@ -600,6 +604,9 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
     <div class="seance reveal">
       <h3>Votre première séance</h3>
       <p class="seance-intro">Le plus souvent avec Pierre, préparée à partir de votre entretien. On entre directement dans le vif du sujet.</p>
+      <figure class="seance-photo">
+        <img src="assets/evaluation-pierre.jpg" alt="Pierre évalue la mobilité de hanche d'une cliente au Clos" loading="lazy" width="900" height="1125">
+      </figure>
       <ol class="etapes">
         <li class="etape">
           <span class="num">01</span>
@@ -692,7 +699,7 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
 
         <p style="margin-top:36px"><a href="#reserver" class="btn-ligne">Réserver un entretien</a></p>
       </div>
-      <div class="coaching-img reveal" role="img" aria-label="Séance de coaching privé au Clos"></div>
+      <div class="coaching-img reveal" role="img" aria-label="Pierre corrige le mouvement d'un client au Clos"></div>
     </div>
   </div>
 </section>
@@ -706,7 +713,7 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
       <p>Un espace privé au cœur de Cannes, ouvert sur rendez-vous. Chaque détail, la lumière, le matériel, le calme, sert un seul objectif : votre progression. Vestiaires et douches sont à votre disposition, entretenus chaque jour.</p>
     </div>
     <div class="club-gallery reveal">
-      <figure class="g1" role="img" aria-label="Le studio Le Clos"></figure>
+      <figure class="g1" role="img" aria-label="Mathieu en séance de coaching au studio Le Clos"></figure>
       <figure class="g2" role="img" aria-label="Les vestiaires du Clos"></figure>
       <figure class="g3" role="img" aria-label="Le matériel du Clos"></figure>
     </div>
@@ -722,7 +729,7 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
 <section class="bilan" id="analyse">
   <div class="wrap">
     <div class="grid">
-      <div class="bilan-img reveal" role="img" aria-label="Appareil d'analyse corporelle du Clos"></div>
+      <div class="bilan-img reveal" role="img" aria-label="Analyse de la composition corporelle en cours au Clos"></div>
       <div class="reveal">
         <span class="eyebrow">En option</span>
         <h2>Analyse corporelle de précision</h2>
