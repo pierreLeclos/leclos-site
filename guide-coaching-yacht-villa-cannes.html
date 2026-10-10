@@ -131,7 +131,7 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
 
     <div class="sep"></div>
 
-    <p><strong>Au Clos</strong>, l'accompagnement sur yacht ou en villa suit exactement le même standard qu'en studio : coachs diplômés d'État et certifiés en interne, matériel complet, ponctualité stricte, et pour ceux qui le souhaitent, une analyse corporelle de précision dès la première séance — un niveau de détail que peu d'accompagnements à bord proposent à Cannes.</p>
+    <p><strong>Au Clos</strong>, l'accompagnement sur yacht ou en villa suit exactement le même standard qu'en studio : coachs qualifiés et certifiés en interne, matériel complet, ponctualité stricte, et pour ceux qui le souhaitent, une analyse corporelle de précision dès la première séance — un niveau de détail que peu d'accompagnements à bord proposent à Cannes.</p>
   </div>
 </section>
 
@@ -155,8 +155,8 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
   <div class="wrap reveal">
     <span class="eyebrow">Votre séance à bord ou en villa</span>
     <h2>Réservez votre accompagnement</h2>
-    <p>Indiquez vos disponibilités et le lieu souhaité. Nous revenons vers vous personnellement pour confirmer votre créneau.</p>
-    <a href="/#reserver" class="btn-or">Prendre rendez-vous</a>
+    <p>Tout commence par un entretien avec Pierre, offert et sans engagement. Indiquez vos disponibilités et le lieu souhaité : nous revenons vers vous le jour même.</p>
+    <a href="/#reserver" class="btn-or">Réserver un entretien</a>
   </div>
 </section>
 
@@ -180,5 +180,6 @@ window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scr
 const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.15});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
+<script src="/assets/reservation-mobile.js" defer></script>
 </body>
 </html>

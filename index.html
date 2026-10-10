@@ -114,7 +114,7 @@
         { "@type": "Question", "name": "Je n'ai pas fait de sport depuis des années, est-ce pour moi ?", "acceptedAnswer": { "@type": "Answer", "text": "C'est le cas de beaucoup de nos clients à leur arrivée. La séance part de votre niveau réel, mesuré par les tests, pas d'un programme type." } },
         { "@type": "Question", "name": "J'ai mal au dos, ou une ancienne blessure.", "acceptedAnswer": { "@type": "Answer", "text": "Dites-le dès l'entretien. On travaille autour de la douleur, jamais à travers. Si nécessaire, nous vous demanderons l'avis de votre médecin." } },
         { "@type": "Question", "name": "Vais-je être observé ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. Le studio est privé et sur rendez-vous : jamais de salle ouverte, jamais de public." } },
-        { "@type": "Question", "name": "Et si ça ne me convient pas ?", "acceptedAnswer": { "@type": "Answer", "text": "Vous réglez uniquement cette séance, au tarif de 70 €. Aucun forfait, aucune relance." } },
+        { "@type": "Question", "name": "Et si ça ne me convient pas ?", "acceptedAnswer": { "@type": "Answer", "text": "Vous réglez uniquement votre séance, au tarif de 70 €, sans obligation de poursuivre." } },
         { "@type": "Question", "name": "Solo ou duo : comment choisir ?", "acceptedAnswer": { "@type": "Answer", "text": "Le solo est entièrement centré sur vous. Le duo réunit deux personnes autour d'une même séance, avec un coach : en couple, entre amis ou entre collègues." } },
         { "@type": "Question", "name": "Combien de séances par semaine ?", "acceptedAnswer": { "@type": "Answer", "text": "Autant que votre objectif et votre agenda le demandent. Pierre vous conseille le rythme le plus juste lors de l'entretien." } },
         { "@type": "Question", "name": "Puis-je être coachée par une femme ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Karina accompagne les clientes qui le souhaitent, au studio comme à domicile." } },
@@ -176,7 +176,7 @@ body{
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
 }
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:1px solid var(--or);outline-offset:4px}
 
 /* ---------- grain / texture d'ambiance ---------- */
@@ -287,6 +287,11 @@ nav.scrolled{
 .hero-note:hover{color:var(--or-clair)}
 .hero-note .etoiles{color:var(--or);letter-spacing:0.12em;margin-right:6px}
 .hero-pratique{margin-top:10px;font-size:16px;color:var(--creme-doux);opacity:.8}
+.hero-sub.hero-sub-1{margin-bottom:16px}
+.hero-actions{align-items:flex-start}
+.hero-actions > .btn-ligne{margin-top:20px}
+.hero-cta{display:flex;flex-direction:column;align-items:center;gap:12px}
+.hero-offert{font-size:16px;font-style:italic;color:var(--creme-doux)}
 .scroll-hint{
   position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:2;
   font-family:var(--serif-titre);font-size:11px;letter-spacing:0.3em;text-transform:uppercase;
@@ -374,6 +379,12 @@ nav.scrolled{
 /* ============ AVIS ============ */
 .avis{padding:100px 20px;background:var(--noir-doux);border-top:1px solid var(--trait);border-bottom:1px solid var(--trait);text-align:center}
 .avis h2{font-family:var(--serif-corps);font-weight:400;font-size:clamp(30px,4vw,46px);margin:16px 0 40px}
+
+/* ============ TÉMOIGNAGES (texte lisible sans JavaScript) ============ */
+.temoignages{max-width:1100px;margin:0 auto 50px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:left}
+.temoignage{padding:32px 30px;border:1px solid var(--trait);border-radius:3px;background:var(--noir);display:flex;flex-direction:column;justify-content:space-between;gap:22px}
+.temoignage blockquote p{font-style:italic;font-size:19px;line-height:1.6;color:var(--creme);margin:0}
+.temoignage figcaption{font-family:var(--serif-titre);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--or);line-height:1.6}
 
 /* ============ TARIFS ============ */
 .coaching{padding:130px 0}
@@ -487,7 +498,14 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
   nav{padding:18px 22px}
   nav.scrolled{padding:14px 22px}
   .nav-cta{display:none}
-  .hero-actions{flex-direction:column;gap:22px}
+  .hero-actions{flex-direction:column;gap:22px;align-items:center}
+  .hero-actions > .btn-ligne{margin-top:0}
+  .hero{padding-top:100px}
+  .hero-logo{width:150px;margin-bottom:24px}
+  .hero-sub.hero-sub-1{margin-bottom:12px}
+  .temoignages{grid-template-columns:1fr;gap:18px}
+  .temoignage{padding:26px 24px}
+  .temoignage blockquote p{font-size:17px}
   .bilan .grid,.coaching .grid{grid-template-columns:1fr;gap:44px}
   .bilan-img{aspect-ratio:3/5;max-height:none}
   .coaching-img{position:relative;top:auto;aspect-ratio:4/3;max-height:420px;order:-1}
@@ -530,13 +548,17 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
   <div class="hero-content">
     <img src="assets/logo.png" alt="Le Clos · Cannes" class="hero-logo">
     <h1>Studio de coaching privé à Cannes</h1>
-    <p class="hero-sub">Un coach dédié, un studio privé et des séances construites sur vos objectifs. Seul ou en duo, au cœur de Cannes, à votre rythme.</p>
+    <p class="hero-sub hero-sub-1">Perdre du poids, développer votre masse musculaire, vous sentir mieux dans votre corps : au Clos, votre coach construit les séances autour de vos objectifs.</p>
+    <p class="hero-sub">En solo ou en duo, dans un studio privé au cœur de Cannes, chaque exercice est expliqué, corrigé et adapté à votre niveau.</p>
     <div class="hero-actions">
-      <a href="#reserver" class="btn-or">Réserver un entretien</a>
-      <a href="#tarifs" class="btn-ligne">Découvrir le coaching</a>
+      <div class="hero-cta">
+        <a href="#reserver" class="btn-or">Réserver un entretien</a>
+        <span class="hero-offert">Entretien offert, sans engagement.</span>
+      </div>
+      <a href="#tarifs" class="btn-ligne">Voir les tarifs</a>
     </div>
     <!-- Mettre à jour le nombre d'avis une fois par mois. Si la note passe sous 5,0, corriger le jour même. -->
-    <a href="https://www.google.com/maps/search/?api=1&query=Le+Clos+27+rue+Jean+Jaur%C3%A8s+Cannes" target="_blank" rel="noopener" class="hero-note"><span class="etoiles" aria-hidden="true">★★★★★</span>5,0 · 89 avis Google</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Le+Clos+27+rue+Jean+Jaur%C3%A8s+Cannes" target="_blank" rel="noopener" class="hero-note"><span class="etoiles" aria-hidden="true">★★★★★</span>5,0 · 91 avis Google</a>
     <p class="hero-pratique">27 rue Jean-Jaurès · Sur rendez-vous</p>
   </div>
 </header>
@@ -660,7 +682,7 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
         </details>
         <details>
           <summary>Et si ça ne me convient pas ?</summary>
-          <p>Vous réglez uniquement cette séance, au tarif de 70 €. Aucun forfait, aucune relance.</p>
+          <p>Vous réglez uniquement votre séance, au tarif de 70 €, sans obligation de poursuivre.</p>
         </details>
       </div>
 
@@ -676,6 +698,21 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
 <section class="avis">
   <span class="eyebrow">Avis Google</span>
   <h2>Ce qu'ils en disent</h2>
+  <!-- Témoignages : texte exact des avis Google publics, sans retouche. Lisibles sans JavaScript. -->
+  <div class="temoignages">
+    <figure class="temoignage">
+      <blockquote><p>Je m'entraîne avec Pierre depuis plus de deux ans et je l'ai suivi dans toutes ses aventures, ce qui en dit long ! C'est un coach qui connaît parfaitement le corps humain et qui sait vraiment faire travailler les bons muscles, de façon ciblée et intelligente. Chaque séance est efficace et adaptée à mes besoins. Sérieux, passionné et toujours à l'écoute, je le recommande les yeux fermés !</p></blockquote>
+      <figcaption>David N. · Avis Google, septembre 2026</figcaption>
+    </figure>
+    <figure class="temoignage">
+      <blockquote><p>Je suis suivie au clos depuis quelque temps et je suis vraiment satisfaite de l’accompagnement. Pierre est très professionnel, a l’écoute et adapte chaque séance en fonction de mes besoins et de mes objectifs. Le coaching est personnalisé, précis et toujours réalisé dans une très bonne ambiance. Le lieu est également très agréable, calme et parfaitement équipé. On est loin de la salle de sport classique. Je recommande le Clos sans hésitation à toutes les personnes qui recherchent un coaching privé sérieux à Cannes</p></blockquote>
+      <figcaption>Patricia D. · Avis Google, septembre 2026</figcaption>
+    </figure>
+    <figure class="temoignage">
+      <blockquote><p>Une salle vraiment agréable, avec un accompagnement personnalisé grâce aux coachings de Mathieu ou Pierre. Ils sont à l’écoute, professionnels, avec une petite touche d’humour, et savent parfaitement adapter les séances aux objectifs et au niveau de chacun. Si vous cherchez un endroit pour progresser sérieusement tout en étant bien encadré, je recommande sans hésiter !</p></blockquote>
+      <figcaption>Mathis M. · Avis Google, septembre 2026</figcaption>
+    </figure>
+  </div>
   <script defer async src='https://cdn.trustindex.io/loader.js?50e888177114100e5776d74026a'></script>
 </section>
 
@@ -710,7 +747,8 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
         </div>
 
         <div class="tarif-notes">
-          <p><em>Entretien avec Pierre : offert.</em> Première séance facturée au tarif du rythme que vous choisissez ensuite.</p>
+          <p><em>Entretien avec Pierre : offert, sans engagement.</em></p>
+          <p><em>Première séance :</em> si vous choisissez ensuite un rythme régulier, le tarif de ce rythme s'applique dès cette première séance. En solo, une première séance qui reste ponctuelle est facturée 70 €.</p>
           <p><em>Domicile, villa, yacht : sur demande.</em> Tarif selon le lieu et la prestation.</p>
           <p><em>Annulation</em> gratuite jusqu'à 24 h avant la séance. Passé ce délai, la séance est due.</p>
         </div>
@@ -762,7 +800,7 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
         <p>Des données précises pour savoir où vous en êtes et orienter votre entraînement, que vous soyez coaché au Clos ou non.</p>
         <div class="prix">89 €<span>Résultats expliqués sur place par Pierre. Vous repartez avec votre dossier personnel : 4 à 5 pages imprimées, et l'analyse complète envoyée par e-mail.</span></div>
         <p class="precision">Optionnelle : elle n'est pas nécessaire pour commencer le coaching. Elle ne remplace pas un avis médical.</p>
-        <a href="#reserver" class="btn-ligne">Réserver mon analyse</a>
+        <p style="display:flex;gap:30px;flex-wrap:wrap;align-items:center;margin-bottom:0"><a href="#reserver" class="btn-ligne">Réserver mon analyse</a><a href="/analyse-corporelle-cannes" class="btn-ligne">L'analyse corporelle en détail</a></p>
       </div>
     </div>
   </div>
@@ -960,5 +998,6 @@ form.addEventListener('submit',async(ev)=>{
   }catch(e){alert("Connexion impossible. Réessayez, ou écrivez-nous sur WhatsApp au 07 66 27 28 39.");}
 });
 </script>
+<script src="/assets/reservation-mobile.js" defer></script>
 </body>
 </html>
