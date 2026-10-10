@@ -17,7 +17,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "HealthClub",
+      "@type": "SportsActivityLocation",
       "@id": "https://www.leclos-cannes.fr/#business",
       "name": "Le Clos",
       "alternateName": "Le Clos Cannes - Coaching privé",
@@ -28,6 +28,7 @@
       "currenciesAccepted": "EUR",
       "paymentAccepted": "Carte bancaire, virement, espèces",
       "image": "https://www.leclos-cannes.fr/assets/og-image.jpg",
+      "logo": "https://www.leclos-cannes.fr/assets/logo.png",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "27 rue Jean Jaurès",
@@ -36,9 +37,18 @@
         "addressRegion": "Provence-Alpes-Côte d'Azur",
         "addressCountry": "FR"
       },
-      "areaServed": { "@type": "City", "name": "Cannes" },
+      "areaServed": [
+        { "@type": "City", "name": "Cannes" },
+        { "@type": "City", "name": "Le Cannet" },
+        { "@type": "City", "name": "Antibes" }
+      ],
       "foundingDate": "2026-05-06",
       "founder": { "@id": "https://www.leclos-cannes.fr/#pierre-leblond" },
+      "employee": [
+        { "@id": "https://www.leclos-cannes.fr/#pierre-leblond" },
+        { "@type": "Person", "name": "Mathieu", "jobTitle": "Coach, diplômé d'État, certifié Le Clos", "description": "Ancien handballeur professionnel. Performance, santé, bien-être et longévité." },
+        { "@type": "Person", "name": "Karina", "jobTitle": "Coach femme, certifiée Le Clos", "description": "Accompagne les clientes qui souhaitent être coachées par une femme, au studio comme à domicile, à Cannes." }
+      ],
       "knowsLanguage": ["fr", "en"],
       "sameAs": ["https://www.instagram.com/leclos.cannes/"],
       "hasOfferCatalog": {
@@ -66,6 +76,14 @@
             "price": "89",
             "priceCurrency": "EUR",
             "itemOffered": { "@type": "Service", "name": "Analyse corporelle de précision", "description": "Composition, répartition, posture et repères cardiovasculaires, avec dossier personnel. Optionnelle." }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Coaching à domicile, en villa ou sur yacht", "description": "Coaching privé à domicile, en villa ou à bord d'un yacht, à Cannes et alentours. Sur demande, tarif selon le lieu et la prestation." }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Coaching avec une coach femme", "description": "Pour les clientes qui le souhaitent, séances avec Karina, au studio comme à domicile." }
           }
         ]
       }
