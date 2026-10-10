@@ -265,6 +265,10 @@ nav.scrolled{
 /* ============ AVIS ============ */
 .avis{padding:90px 20px;text-align:center}
 .avis h2{font-family:var(--serif-corps);font-weight:400;font-size:clamp(30px,4vw,46px);margin:16px 0 40px}
+.temoignages{max-width:1100px;margin:0 auto 50px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:left}
+.temoignage{padding:32px 30px;border:1px solid var(--trait);border-radius:3px;background:var(--noir-doux);display:flex;flex-direction:column;justify-content:space-between;gap:22px}
+.temoignage blockquote p{font-style:italic;font-size:19px;line-height:1.6;color:var(--creme);margin:0}
+.temoignage figcaption{font-family:var(--serif-titre);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--or);line-height:1.6}
 
 /* ============ CTA final ============ */
 .cta-final{padding:140px 0;text-align:center;position:relative;overflow:hidden;background:var(--noir-doux);border-top:1px solid var(--trait)}
@@ -309,6 +313,9 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
   .hero-actions > .btn-ligne{margin-top:0}
   .section,.intro,.cta-final,.garanties{padding:80px 0}
   .avis{padding:70px 20px}
+  .temoignages{grid-template-columns:1fr;gap:18px}
+  .temoignage{padding:26px 24px}
+  .temoignage blockquote p{font-size:17px}
   .chiffres{grid-template-columns:1fr}
   .chiffre + .chiffre{border-left:none;border-top:1px solid var(--trait)}
   .etape{grid-template-columns:50px 1fr;gap:12px}
@@ -520,6 +527,21 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
 <section class="avis">
   <span class="eyebrow">Google reviews</span>
   <h2>What our clients say</h2>
+  <!-- Testimonials: exact text of public Google reviews written in English, unedited. Readable without JavaScript. -->
+  <div class="temoignages">
+    <figure class="temoignage">
+      <blockquote><p>The best personal trainer I’ve ever had! Extremely professional, knowledgeable, and motivating. He always pushes me to give my best while making sure every exercise is done correctly and safely. I’ve seen a huge difference in my strength, fitness, and overall performance since training with him. Highly recommended to anyone looking for a truly exceptional PT</p></blockquote>
+      <figcaption>Ahmed B. · Google review, visited August 2026</figcaption>
+    </figure>
+    <figure class="temoignage">
+      <blockquote><p>Amazing gym, very clean with great equipment and machines! I took PT sessions with coach Pierre and I’m definitely going to take more sessions when I’m back in Cannes next year.</p></blockquote>
+      <figcaption>Yasmina · Google review, visited August 2026</figcaption>
+    </figure>
+    <figure class="temoignage">
+      <blockquote><p>Great boutique gym with excellent trainers. Pierre is incredibly professional</p></blockquote>
+      <figcaption>Maya S. · Google review, visited September 2026</figcaption>
+    </figure>
+  </div>
   <script defer async src='https://cdn.trustindex.io/loader.js?50e888177114100e5776d74026a'></script>
 </section>
 
