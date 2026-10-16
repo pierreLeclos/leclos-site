@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Coach sportif privé à Cannes | Studio de coaching Le Clos</title>
-<meta name="description" content="Studio de coaching privé au cœur de Cannes, sur rendez-vous. Entretien offert, séances à l'unité, sans abonnement. Noté 5,0 sur Google.">
+<meta name="description" content="Coach sportif privé à Cannes, en solo ou en duo, dans un studio sur rendez-vous rue Jean Jaurès. Entretien offert, séances de 55 à 70 € selon votre rythme, sans abonnement.">
 <meta name="google-site-verification" content="OFNlJsLie36IwIcbnbdloGAf82VRU2mbPsJXbdpOmNo" />
 <link rel="canonical" href="https://www.leclos-cannes.fr/" />
 <link rel="alternate" hreflang="fr" href="https://www.leclos-cannes.fr/" />
@@ -20,8 +20,8 @@
       "@type": "SportsActivityLocation",
       "@id": "https://www.leclos-cannes.fr/#business",
       "name": "Le Clos",
-      "alternateName": "Le Clos Cannes - Coaching privé",
-      "description": "Studio de coaching privé au cœur de Cannes, sur rendez-vous. Un coach entièrement consacré à chaque séance : musculation, remise en forme, perte de poids, préparation physique et analyse corporelle de précision. Séances à l'unité, sans abonnement.",
+      "alternateName": "Le Clos Cannes",
+      "description": "Studio de coaching sportif privé au cœur de Cannes, sur rendez-vous. Un coach entièrement consacré à chaque séance : musculation, remise en forme, perte de poids, préparation physique et analyse corporelle de précision. Séances à l'unité, sans abonnement.",
       "url": "https://www.leclos-cannes.fr/",
       "telephone": "+33766272839",
       "priceRange": "55 € - 90 €",
@@ -40,7 +40,12 @@
       "areaServed": [
         { "@type": "City", "name": "Cannes" },
         { "@type": "City", "name": "Le Cannet" },
-        { "@type": "City", "name": "Antibes" }
+        { "@type": "City", "name": "Antibes" },
+        { "@type": "City", "name": "Mougins" }
+      ],
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Le+Clos+27+rue+Jean+Jaur%C3%A8s+Cannes",
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "07:00", "closes": "22:00" }
       ],
       "foundingDate": "2026-05-06",
       "founder": { "@id": "https://www.leclos-cannes.fr/#pierre-leblond" },
@@ -118,7 +123,7 @@
         { "@type": "Question", "name": "Solo ou duo : comment choisir ?", "acceptedAnswer": { "@type": "Answer", "text": "Le solo est entièrement centré sur vous. Le duo réunit deux personnes autour d'une même séance, avec un coach : en couple, entre amis ou entre collègues." } },
         { "@type": "Question", "name": "Combien de séances par semaine ?", "acceptedAnswer": { "@type": "Answer", "text": "Autant que votre objectif et votre agenda le demandent. Pierre vous conseille le rythme le plus juste lors de l'entretien." } },
         { "@type": "Question", "name": "Puis-je être coachée par une femme ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Karina accompagne les clientes qui le souhaitent, au studio comme à domicile." } },
-        { "@type": "Question", "name": "Proposez-vous le coaching à domicile, en villa ou sur un yacht ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, sur demande. Le tarif dépend du lieu et de la prestation." } },
+        { "@type": "Question", "name": "Proposez-vous le coaching à domicile, en villa ou sur un yacht ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, sur demande : votre coach sportif se déplace à domicile, en villa ou à bord, à Cannes et alentours. Le tarif dépend du lieu et de la prestation." } },
         { "@type": "Question", "name": "Que dois-je apporter ?", "acceptedAnswer": { "@type": "Answer", "text": "Simplement votre tenue et vos chaussures de sport. Vestiaires et douches sont à votre disposition, entretenus chaque jour, et nous fournissons serviettes et eau." } },
         { "@type": "Question", "name": "Et si je dois annuler ?", "acceptedAnswer": { "@type": "Answer", "text": "L'annulation est gratuite jusqu'à 24 h avant la séance. Passé ce délai, la séance est due." } },
         { "@type": "Question", "name": "Quels sont les moyens de paiement ?", "acceptedAnswer": { "@type": "Answer", "text": "Carte bancaire, virement ou espèces." } }
@@ -408,6 +413,7 @@ nav.scrolled{
 .club-head{max-width:680px;margin:0 auto 70px}
 .club-head h2{font-family:var(--serif-corps);font-weight:400;font-size:clamp(32px,4.5vw,54px);line-height:1.12;margin:16px 0 22px}
 .club-head p{color:var(--creme-doux)}
+.club-head p a{color:var(--or-clair);text-decoration:none;border-bottom:1px solid var(--trait)}
 .club-gallery{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:repeat(2,1fr);gap:18px;height:620px}
 .club-gallery figure{position:relative;overflow:hidden;border-radius:3px;border:1px solid var(--trait);background:#0c0c0c center/cover no-repeat}
 .club-gallery figure::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(10,10,10,0.6))}
@@ -549,7 +555,7 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
     <img src="assets/logo.png" alt="Le Clos · Cannes" class="hero-logo">
     <h1>Studio de coaching privé à Cannes</h1>
     <p class="hero-sub hero-sub-1">Perdre du poids, développer votre masse musculaire, vous sentir mieux dans votre corps : au Clos, votre coach construit les séances autour de vos objectifs.</p>
-    <p class="hero-sub">En solo ou en duo, dans un studio privé au cœur de Cannes, chaque exercice est expliqué, corrigé et adapté à votre niveau.</p>
+    <p class="hero-sub">En solo ou en duo, avec un coach sportif entièrement consacré à vous, dans un studio privé au cœur de Cannes. Chaque exercice est expliqué, corrigé et adapté à votre niveau.</p>
     <div class="hero-actions">
       <div class="hero-cta">
         <a href="#reserver" class="btn-or">Réserver un entretien</a>
@@ -559,7 +565,7 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
     </div>
     <!-- Mettre à jour le nombre d'avis une fois par mois. Si la note passe sous 5,0, corriger le jour même. -->
     <a href="https://www.google.com/maps/search/?api=1&query=Le+Clos+27+rue+Jean+Jaur%C3%A8s+Cannes" target="_blank" rel="noopener" class="hero-note"><span class="etoiles" aria-hidden="true">★★★★★</span>5,0 · 91 avis Google</a>
-    <p class="hero-pratique">27 rue Jean-Jaurès · Sur rendez-vous</p>
+    <p class="hero-pratique">27 rue Jean Jaurès · Sur rendez-vous</p>
   </div>
 </header>
 
@@ -604,7 +610,7 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
 
       <div class="fondateur-texte">
         <p>Ce qui distingue Pierre : la précision du geste, une connaissance fine de l'anatomie et une vraie écoute. Chaque mouvement est expliqué, corrigé et adapté à votre corps, que vous repreniez le sport ou prépariez une compétition.</p>
-        <p>Coach à Cannes depuis dix ans, il a bâti sa réputation séance après séance. Certains de ses clients l'accompagnent depuis sept ans, d'autres ont dépassé les 800 séances à ses côtés, et beaucoup sont venus sur recommandation. Il a préparé des sportifs de haut niveau, jusqu'au niveau international, et forme des coachs depuis 5 ans. En français et en anglais.</p>
+        <p>Coach sportif à Cannes depuis dix ans, il a bâti sa réputation séance après séance. Certains de ses clients l'accompagnent depuis sept ans, d'autres ont dépassé les 800 séances à ses côtés, et beaucoup sont venus sur recommandation. Il a préparé des sportifs de haut niveau, jusqu'au niveau international, et forme des coachs depuis 5 ans. En français et en anglais.</p>
       </div>
       <p class="fondateur-citation">« La perfection n'est accessible que par la répétition. »</p>
     </div>
@@ -767,6 +773,7 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
       <span class="eyebrow">Le lieu</span>
       <h2>Un club, pas une salle.</h2>
       <p>Un espace privé au cœur de Cannes, ouvert sur rendez-vous. Chaque détail, la lumière, le matériel, le calme, sert un seul objectif : votre progression. Vestiaires et douches sont à votre disposition, entretenus chaque jour.</p>
+      <p>Vous cherchiez une <a href="/salle-de-sport-privee-cannes">salle de sport privée à Cannes</a> ? Ici, sans foule ni abonnement, chaque séance se fait avec votre coach.</p>
     </div>
     <div class="club-gallery reveal">
       <figure class="g1" role="img" aria-label="Mathieu en séance de coaching au studio Le Clos"></figure>
@@ -826,7 +833,7 @@ footer{padding:80px 0 50px;text-align:center;border-top:1px solid var(--trait)}
       </details>
       <details>
         <summary>Proposez-vous le coaching à domicile, en villa ou sur un yacht ?</summary>
-        <p>Oui, sur demande. Le tarif dépend du lieu et de la prestation.</p>
+        <p>Oui, sur demande : votre coach sportif se déplace à domicile, en villa ou à bord, à Cannes et alentours. Le tarif dépend du lieu et de la prestation.</p>
       </details>
       <details>
         <summary>Que dois-je apporter ?</summary>
